@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Show
+    </title>
+</head>
+<body>
+    <h1>
+        Show Student Details..
+    </h1>
+    <table border="2px">
+    <thead>
+        <tr>
+           <th>Student id</th>
+            <th>Student NAME</th>
+            <th>Address</th>
+            <th>Age</th>
+            <th>joindate</th>
+            <th>Course</th>
+           </tr>
+     </thead>
+    <tbody>
+    {% for s in student %}
+    <tr>
+    <td><{{s.id}}</td>
+    <td><{{s.student_name}}</td>
+    <td><{{s.address}}</td>
+    <td><{{s.age}}</td>
+    <td><{{s.joindate}}</td>
+    <td><{{s.course.course_name}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+</body>
